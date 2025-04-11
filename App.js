@@ -10,6 +10,7 @@ import { UserProvider, UserContext } from "./src/context/UserContext";
 import SplashScreen from "./src/screens/SplashScreen";
 
 import TabNavigator from "./src/navigation/TabNavigator";
+import DrawerNavigator from "./src/navigation/DrawerNavigator";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,7 +26,7 @@ function RootNavigator() {
           {!user ? (
             <Stack.Screen name="Login" component={LoginScreen} />
           ) : (
-            <Stack.Screen name="Main" component={TabNavigator} />
+            <Stack.Screen name="Main" component={DrawerNavigator} />
           )}
         </Stack.Navigator>
       </NavigationContainer>
